@@ -1,4 +1,16 @@
 aid: ec-cubed
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ec-cubed.png
 name: EC Cubed
 description: EC Cubed is a company surfaced as a portfolio company of battery-ventures and added to the
   API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
@@ -9,9 +21,36 @@ x-backed-by:
 - battery-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: dormant
+x-status-reason: 'Domain eccubed.com resolves to a parked for-sale lander page (JS
+  redirect to /lander); every path, including all /.well-known/* endpoints, returns
+  the identical parking stub with HTTP 200 (wildcard catch-all, not a real API surface).
+  EC Cubed appears to be a defunct late-1990s B2B e-commerce software company. No live
+  developer portal, documentation, OpenAPI, SDKs, or API surface exists to enrich.'
+x-enrichment-checked: '2026-07-20'
+x-enrichment-result: 'nochange — no real provider surface; nothing searched/generated/derived
+  without fabrication.'
+x-enrichment-evidence:
+- 'eccubed.com A records 76.223.54.146 / 13.248.169.48; NS ns1/ns2.namefind.com (GoDaddy
+  aftermarket parking); SOA RNAME dns.jomax.net (GoDaddy).'
+- 'TLS cert CN=eccubed.com issued by GoDaddy Secure Certificate Authority - G2, valid
+  2025-07-28 to 2026-07-28 — parking cert, not an API host.'
+- 'Wildcard catch-all confirmed: /, /.well-known/security.txt and a control path
+  /zzz-nonexistent-path-test all return HTTP 200 with the identical 114-byte lander
+  stub. No SecurityTxt or WellKnown artifact can be honestly recorded.'
+- 'https://eccubed.com/llms.txt returns HTTP 200 but is a GoDaddy domain-for-sale
+  llms.txt describing the aftermarket listing, NOT a provider llms.txt — deliberately
+  NOT captured as an LLMsTxt artifact, as it documents a domain sale and not an API.'
+- 'api.eccubed.com does not resolve (curl exit 000).'
+- 'APIs.io catalog search for "EC Cubed" returns 0 providers.'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
 tags:
 - Company
 apis: []
