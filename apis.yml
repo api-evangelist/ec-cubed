@@ -43,7 +43,7 @@ x-enrichment-evidence:
   NOT captured as an LLMsTxt artifact, as it documents a domain sale and not an API.'
 - 'api.eccubed.com does not resolve (curl exit 000).'
 - 'APIs.io catalog search for "EC Cubed" returns 0 providers.'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 x-enrichment:
